@@ -1,0 +1,19 @@
+.theme-dark {
+  --color-primary: #282b41;
+  --color-white: #ffffff;
+  --color-off-white: #ffffffb0;
+  --color-purple: #8c96ff;
+  --color-green: #64ffaa;
+  --color-orange: #ffc164;
+  --color-red: #ff6464;
+}
+
+.theme-light {
+  --color-primary: #282b41;
+  --color-white: #ffffff;
+  --color-off-white: #ffffffb0;
+  --color-purple: #8c96ff;
+  --color-green: #64ffaa;
+  --color-orange: #ffc164;
+  --color-red: #ff6464;
+}
