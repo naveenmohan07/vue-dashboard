@@ -7,12 +7,12 @@ import AppIcon from '@/core/components/AppIcon.vue' // Import AppIcon locally
     <div class="app-input flex items-center">
       <AppIcon
         icon-name="MagnifyingGlassIcon"
-        class="bg-[#FFFFFF] bg-opacity-5 border-0 h-10 text-[#FFFFFF] text-opacity-40 rounded-l-md"
+        class="bg-[#FFFFFF] bg-opacity-5 border-0 h-11 text-[#FFFFFF] text-opacity-40 rounded-l-md"
       />
       <input
         type="text"
         placeholder="Search"
-        class="bg-[#FFFFFF] border-0 bg-opacity-5 rounded-r-md"
+        class="bg-[#FFFFFF] border-0 bg-opacity-5 h-11 rounded-r-md"
       />
     </div>
   </div>

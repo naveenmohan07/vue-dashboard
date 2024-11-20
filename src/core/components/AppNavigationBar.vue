@@ -9,7 +9,7 @@ const routeHistory = computed(() => {
 </script>
 
 <template>
-  <p class="route" v-for="rH in routeHistory" :key="rH.path">
+  <p class="route p-4 border-b-2 border-[#FFFFFF0A]" v-for="rH in routeHistory" :key="rH.path">
     <RouterLink :to="rH.path" class="text-[#cdcbcb]">{{
       rH.name?.toString().toUpperCase()
     }}</RouterLink>

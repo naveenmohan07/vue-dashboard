@@ -11,6 +11,7 @@ export function useProfile() {
     error.value = null
     try {
       const response = await profileService.getProfile()
+      console.log(response.data)
       user.value = response.data
     } catch (err: unknown) {
       error.value = (err as Error).message ?? 'Something went wrong'

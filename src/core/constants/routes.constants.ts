@@ -11,40 +11,40 @@ export const ROUTES = {
 export const NAVIGATION_CONFIGURATION = [
   {
     title: 'Dashboard',
-    icon: 'Squares2X2Icon',
+    icon: 'dashboard',
     path: ROUTES.DASHBOARD,
   },
   {
     title: 'Users',
-    icon: 'UserIcon',
+    icon: 'profiles',
     path: ROUTES.USERS,
   },
   {
     title: 'Server',
-    icon: 'ServerStackIcon',
+    icon: 'lists',
     path: ROUTES.SERVER,
   },
   {
     title: 'Eye',
-    icon: 'EyeIcon',
+    icon: 'keywords',
     path: ROUTES.EYE,
   },
 
   {
     title: 'Chat',
-    icon: 'ChatBubbleLeftIcon',
+    icon: 'monitors',
     path: ROUTES.CHAT,
   },
 
   {
     title: 'Trophy',
-    icon: 'TrophyIcon',
+    icon: 'leaderboards',
     path: ROUTES.TROPHY,
   },
 
   {
     title: 'Settings',
-    icon: 'AdjustmentsHorizontalIcon',
+    icon: 'settings',
     path: ROUTES.SETTINGS,
   },
 ]

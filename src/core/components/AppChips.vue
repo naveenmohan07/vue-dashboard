@@ -1,6 +1,6 @@
 <template>
   <div class="app-chips-wrapper">
-    <div class="app-chip bg-[#FFFFFF05] h-full w-fit p-1 flex gap-2 pl-2">
+    <div class="app-chip bg-[#FFFFFF05] h-full w-fit p-1 flex items-center gap-2 pl-2">
       <p class="text-[#fff] text-xs text-opacity-70">{{ chipText }}</p>
       <AppIcon
         icon-name="ExclamationCircleIcon"

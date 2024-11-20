@@ -6,11 +6,11 @@ import AppNavigationBar from './core/components/AppNavigationBar.vue'
 <template>
   <div class="app-wrapper bg-primary flex h-screen">
     <AppSideNavigation />
-    <div class="app-content">
+    <div class="app-content h-full overflow-scroll">
       <div class="app-content-header">
         <AppNavigationBar />
       </div>
-      <div class="app-content-body px-24 py-6 bg-primary">
+      <div class="app-content-body px-16 py-6 bg-primary">
         <router-view></router-view>
       </div>
     </div>

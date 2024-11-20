@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const apiClient = axios.create({
-  baseURL: process.env.API_BASE_URL,
+  baseURL: 'https://staging.campaygn.com/assessment',
   timeout: 10000,
   headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
 })

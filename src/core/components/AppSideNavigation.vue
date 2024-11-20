@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
 import { NAVIGATION_CONFIGURATION } from '../constants/routes.constants'
-import AppIcon from '@/core/components/AppIcon.vue'
-import { ICON_TYPE } from '../constants/app.constants'
-
+import AppSvgIcon from '@/core/components/AppSvgIcon.vue'
 const route = useRoute()
 </script>
 
@@ -15,8 +13,16 @@ const route = useRoute()
       </div>
       <div class="sidebar-content">
         <div class="route my-4" v-for="navItem in NAVIGATION_CONFIGURATION" :key="navItem.path">
-          <RouterLink :to="navItem.path"
-            ><AppIcon
+          <RouterLink :to="navItem.path">
+            <AppSvgIcon
+              :iconPath="navItem.icon"
+              class="h-10 w-10 flex items-center justify-center rounded-md"
+              :class="{
+                'bg-[#4A5568] text-white': route.path === navItem.path,
+                'hover:bg-[#4A5568]': route.path !== navItem.path,
+              }"
+            />
+            <!-- <AppIcon
               :icon-name="navItem.icon"
               icon-color="text-[#cdcbcb]"
               class="flex items-center rounded-md p-2"
@@ -24,7 +30,9 @@ const route = useRoute()
                 'bg-[#4A5568] text-white': route.path === navItem.path,
                 'hover:bg-[#4A5568]': route.path !== navItem.path,
               }"
-          /></RouterLink>
+        
+        /> -->
+          </RouterLink>
         </div>
       </div>
     </div>

@@ -12,5 +12,11 @@ app.directive('capitalize', {
   },
 })
 
+app.directive('percentage', {
+  beforeMount(el) {
+    el.textContent = `${(el.textContent * 100).toFixed(2)}%`
+  },
+})
+
 app.use(router)
 app.mount('#app')

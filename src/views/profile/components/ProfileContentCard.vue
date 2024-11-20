@@ -1,19 +1,3 @@
-<!-- <template>
-  <div class="parent">
-    <div
-      v-for="(image, index) in images"
-      :key="index"
-      :class="`grid-item item-${index + 1}`"
-      :style="getGridStyle(image)"
-    >
-      <div class="badge absolute">
-        <p class="bg-[##303349] m-2 p-0 text-sm px-1 text-[#fff]">{{ index + 1 }}</p>
-      </div>
-      <img :src="image.src" :alt="image.alt" class="image" />
-    </div>
-  </div>
-</template> -->
-
 <template>
   <div class="parent">
     <div
@@ -27,12 +11,20 @@
         <p class="bg-[#303349] m-2 p-0 text-sm px-1 text-[#fff]">{{ index + 1 }}</p>
       </div>
       <img :src="image.src" :alt="image.alt" class="image" />
-
-      <!-- Hover Overlay Text -->
       <div
-        class="overlay absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        class="overlay absolute inset-0 flex bg-[#303349] bg-opacity-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
       >
-        <p class="text-white text-lg">Hovered Text</p>
+        <div class="overlay-text p-6">
+          <p class="text-whit text-sm">15/05/2024</p>
+          <div
+            class="image-reach flex justify-between gap-2"
+            v-for="item in reachData"
+            :key="item.key"
+          >
+            <p class="text-whit text-xs">{{ item.key }}</p>
+            <p class="text-whit text-xs">{{ item.value }}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -40,10 +32,21 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import photo from '@/assets/images/Photo.png'
+import photo2 from '@/assets/images/2.png'
+import photo3 from '@/assets/images/3.png'
+import photo4 from '@/assets/images/4.png'
+import photo5 from '@/assets/images/5.png'
+import photo6 from '@/assets/images/6.png'
+import photo7 from '@/assets/images/7.png'
+import photo8 from '@/assets/images/8.png'
+import photo10 from '@/assets/images/10.png'
+import photo11 from '@/assets/images/11.png'
+import photo12 from '@/assets/images/12.png'
 
 const images = ref([
   {
-    src: 'https://i.pinimg.com/736x/0f/b4/7b/0fb47bdb4df82211dc0a139c35f547f1.jpg',
+    src: photo,
     alt: 'Image 1',
     gridColumn: 'span 2',
     gridRow: 'span 2',
@@ -51,19 +54,19 @@ const images = ref([
     gridRowStart: 1,
   },
   {
-    src: 'https://i.pinimg.com/736x/0f/b4/7b/0fb47bdb4df82211dc0a139c35f547f1.jpg',
+    src: photo2,
     alt: 'Image 2',
     gridColumnStart: 3,
     gridRowStart: 1,
   },
   {
-    src: 'https://i.pinimg.com/736x/0f/b4/7b/0fb47bdb4df82211dc0a139c35f547f1.jpg',
+    src: photo3,
     alt: 'Image 3',
     gridColumnStart: 4,
     gridRowStart: 1,
   },
   {
-    src: 'https://i.pinimg.com/736x/0f/b4/7b/0fb47bdb4df82211dc0a139c35f547f1.jpg',
+    src: photo4,
     alt: 'Image 4',
     gridColumn: 'span 2',
     gridRow: 'span 2',
@@ -71,24 +74,30 @@ const images = ref([
     gridRowStart: 2,
   },
   {
-    src: 'https://i.pinimg.com/736x/0f/b4/7b/0fb47bdb4df82211dc0a139c35f547f1.jpg',
+    src: photo5,
     alt: 'Image 5',
     gridColumnStart: 1,
     gridRowStart: 3,
   },
   {
-    src: 'https://i.pinimg.com/736x/0f/b4/7b/0fb47bdb4df82211dc0a139c35f547f1.jpgg',
+    src: photo6,
     alt: 'Image 6',
     gridColumnStart: 2,
     gridRowStart: 3,
   },
-  { src: 'image7.jpg', alt: 'Image 7', gridColumnStart: 5, gridRowStart: 1 },
-  { src: 'image8.jpg', alt: 'Image 8', gridColumnStart: 5, gridRowStart: 2 },
-  { src: 'image9.jpg', alt: 'Image 9', gridColumnStart: 5, gridRowStart: 3 },
-  { src: 'image10.jpg', alt: 'Image 10', gridColumnStart: 6, gridRowStart: 1 },
-  { src: 'image11.jpg', alt: 'Image 11', gridColumnStart: 6, gridRowStart: 2 },
-  { src: 'image12.jpg', alt: 'Image 12', gridColumnStart: 6, gridRowStart: 3 },
+  { src: photo7, alt: 'Image 7', gridColumnStart: 5, gridRowStart: 1 },
+  { src: photo8, alt: 'Image 8', gridColumnStart: 5, gridRowStart: 2 },
+  { src: photo2, alt: 'Image 9', gridColumnStart: 5, gridRowStart: 3 },
+  { src: photo10, alt: 'Image 10', gridColumnStart: 6, gridRowStart: 1 },
+  { src: photo11, alt: 'Image 11', gridColumnStart: 6, gridRowStart: 2 },
+  { src: photo12, alt: 'Image 12', gridColumnStart: 6, gridRowStart: 3 },
 ])
+
+const reachData = [
+  { key: 'reach', value: '20.7M' },
+  { key: 'impressions', value: '20.7M' },
+  { key: 'engagement', value: '20.7M' },
+]
 
 function getGridStyle(item) {
   const styles: any = {}
@@ -125,7 +134,6 @@ function getGridStyle(item) {
 }
 
 .grid-item {
-  background-color: lightgray;
   position: relative;
 }
 
