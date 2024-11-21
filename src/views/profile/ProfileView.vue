@@ -14,7 +14,7 @@ import InfluencerContentCard from './components/InfluencerContentCard.vue'
       <InfluencerInfoCard />
     </div>
 
-    <div class="influencer-content-container">
+    <div class="influencer-content-container pt-8">
       <ProfileAudienceCard cardHeaderText="CONTENT">
         <div class="influencer-content-body">
           <InfluencerContentCard />

@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 
 const svgContent = ref()
 
@@ -28,4 +28,14 @@ onMounted(() => {
   console.log('iconPath', `/src/assets/svg/${props.iconPath}.svg`)
   loadSvgInline()
 })
+
+watch(
+  () => props.iconPath,
+  (newPath: unknown) => {
+    if (newPath) {
+      loadSvgInline()
+    }
+  },
+  { immediate: true },
+)
 </script>

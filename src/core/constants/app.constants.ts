@@ -25,3 +25,9 @@ export const COUNTRY_CODE = {
   TW: 'Taiwan',
   US: 'United States',
 }
+
+export const CURRENCY = {
+  USD: 'usd',
+  EUR: 'euro',
+  INR: 'rupee',
+}

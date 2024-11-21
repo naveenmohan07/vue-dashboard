@@ -3,6 +3,7 @@ import './styles.css'
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
+import { appStore } from './core/store/app.store'
 
 const app = createApp(App)
 
@@ -19,4 +20,5 @@ app.directive('percentage', {
 })
 
 app.use(router)
+app.use(appStore)
 app.mount('#app')

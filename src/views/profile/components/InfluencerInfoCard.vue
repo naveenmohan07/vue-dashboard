@@ -9,8 +9,11 @@ import { formatShortScale, formatPercentage } from '@/core/utils/app.util'
 import { useProfile } from '@/core/composables/profile.composable'
 import AppLoader from '@/core/components/AppLoader.vue'
 import AppError from '@/core/components/AppError.vue'
+import { useStore } from 'vuex'
 
 const { influencer: influencer, error, isLoading, fetchProfile } = useProfile()
+const store = useStore()
+const currencyIcon = computed(() => store.state.currency)
 
 onMounted(async () => {
   await fetchProfile()
@@ -237,6 +240,8 @@ const radarQualityScoreData = {
         cardHeaderText="EMV"
         cardPercentageText="Bad"
         :cardPrcentage="formattedEmv"
+        :has-suffix-icon="true"
+        :card-icon="currencyIcon"
         :class="getStyleForDirection(influencer.profile_media_value.direction).colorClass"
       />
     </div>
