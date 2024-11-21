@@ -12,17 +12,17 @@
       </div>
       <img :src="image.src" :alt="image.alt" class="image" />
       <div
-        class="overlay absolute inset-0 flex bg-[#303349] bg-opacity-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        class="overlay absolute inset-0 flex bg-[#000000] bg-opacity-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
       >
-        <div class="overlay-text p-6">
+        <div class="overlay-text w-full h-full p-6 overflow-scroll">
           <p class="text-whit text-sm">15/05/2024</p>
           <div
-            class="image-reach flex justify-between gap-2"
+            class="image-reach flex justify-between items-center pt-2"
             v-for="item in reachData"
             :key="item.key"
           >
-            <p class="text-whit text-xs">{{ item.key }}</p>
-            <p class="text-whit text-xs">{{ item.value }}</p>
+            <p class="text-offWhite text-sm">{{ item.key }}</p>
+            <p class="text-offWhite text-sm">{{ item.value }}</p>
           </div>
         </div>
       </div>
@@ -94,9 +94,12 @@ const images = ref([
 ])
 
 const reachData = [
-  { key: 'reach', value: '20.7M' },
-  { key: 'impressions', value: '20.7M' },
-  { key: 'engagement', value: '20.7M' },
+  { key: 'Reach', value: '20.7M' },
+  { key: 'Impressions', value: '20.7M' },
+  { key: 'Engagement Rate', value: '2.8%' },
+  { key: 'Likes:', value: '2.8M' },
+  { key: 'Comments:', value: '29.9K' },
+  { key: 'Influencer EMV:', value: '2.8M' },
 ]
 
 function getGridStyle(item) {
@@ -130,7 +133,7 @@ function getGridStyle(item) {
   gap: 8px;
 }
 .overlay {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(23, 23, 23, 0.746);
 }
 
 .grid-item {
@@ -146,9 +149,5 @@ function getGridStyle(item) {
   height: 100%;
   object-fit: cover;
   border-radius: 4px;
-}
-
-.parent:on-hover {
-  background-color: red;
 }
 </style>

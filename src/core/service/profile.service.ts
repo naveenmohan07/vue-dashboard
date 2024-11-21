@@ -6,4 +6,9 @@ export const profileService = {
     console.log('Fetching profile')
     return apiClient.get(API_ENDPOINTS.PROFILE)
   },
+
+  getAudienceDemographics: () => {
+    console.log('Fetching Audience')
+    return apiClient.get(API_ENDPOINTS.AUDIENCE_DEMOGRAPHICS)
+  },
 }

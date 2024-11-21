@@ -12,7 +12,7 @@ import AppIcon from '@/core/components/AppIcon.vue' // Import AppIcon locally
       <input
         type="text"
         placeholder="Search"
-        class="bg-[#FFFFFF] border-0 bg-opacity-5 h-11 rounded-r-md"
+        class="bg-[#FFFFFF] border-0 bg-opacity-5 h-8 rounded-r-md"
       />
     </div>
   </div>

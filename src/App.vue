@@ -6,7 +6,7 @@ import AppNavigationBar from './core/components/AppNavigationBar.vue'
 <template>
   <div class="app-wrapper bg-primary flex h-screen">
     <AppSideNavigation />
-    <div class="app-content h-full overflow-scroll">
+    <div class="app-content w-full h-full overflow-scroll">
       <div class="app-content-header">
         <AppNavigationBar />
       </div>

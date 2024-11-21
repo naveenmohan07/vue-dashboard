@@ -9,3 +9,7 @@ export const formatShortScale = (value: number, decimalPlaces = 1) => {
 
   return `${value.toFixed(decimalPlaces)}${suffixes[suffixIndex]}`
 }
+
+export const formatPercentage = (value: number): string => {
+  return `${(value * 100).toFixed(2)}%`
+}

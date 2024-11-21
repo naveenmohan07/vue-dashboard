@@ -11,6 +11,7 @@
   display: inline-block;
   width: 80px;
   height: 80px;
+  color: white;
 }
 .lds-dual-ring:after {
   content: ' ';
