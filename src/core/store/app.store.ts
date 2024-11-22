@@ -1,4 +1,3 @@
-// store.ts
 import { createStore } from 'vuex'
 import { CURRENCY } from '../constants/app.constants'
 

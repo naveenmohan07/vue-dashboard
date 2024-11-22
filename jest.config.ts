@@ -1,12 +1,12 @@
-import type { Config } from '@jest/types'
-
-const config: Config.InitialOptions = {
-  transform: {
-    '^.+\\.ts$': 'ts-jest',
-    '^.+\\.vue$': 'vue-jest',
-  },
-  moduleFileExtensions: ['js', 'ts', 'vue'],
+module.exports = {
+  preset: 'ts-jest',
   testEnvironment: 'jsdom',
-}
-
-export default config
+  transform: {
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+  },
+  globals: {
+    'ts-jest': {
+      isolatedModules: true,
+    },
+  },
+};
